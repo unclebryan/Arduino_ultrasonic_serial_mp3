@@ -19,7 +19,7 @@ void loop()
   cm = pulseIn(EchoPin, HIGH) / 58.0; //The echo time is converted into cm
   cm = (int(cm * 100.0)) / 100.0;     //Keep two decimal places
   Serial.println();
-  if(cm>30){ //if you are puting the sensor behind the door use ">" sysmbole insted of ">" p.s. make sure tat the door nob is less than 15 cm away
+  if(cm>30){ //if you are puting the sensor behind the door use ">" sysmbole insted of ">" p.s. make sure tat the door nob is less than 30cm away
     digitalWrite(Data, HIGH);
     delay(200);
     Serial.write(0xAA);
